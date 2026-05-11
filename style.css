@@ -1,0 +1,262 @@
+/* --- AMOR URICH ALLEN: COMPLETE LUXURY PORTFOLIO CSS --- */
+
+:root {
+    --primary-dark: #0f172a;    /* Deep Navy */
+    --accent-purple: #7c3aed;  /* Royal Purple */
+    --accent-light: #f3e8ff;   /* Soft Lavender */
+    --text-main: #1e293b;      /* Slate Gray */
+    --text-muted: #64748b;     /* Muted Slate */
+    --white: #ffffff;
+    --glass-bg: rgba(255, 255, 255, 0.85);
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+body {
+    background-color: var(--white);
+    color: var(--text-main);
+    line-height: 1.6;
+    text-align: center;
+    padding-top: 200px; /* Restored your original hero spacing */
+}
+
+/* --- Navigation (Pinned & Glass Effect) --- */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav .logo {
+    font-weight: 800;
+    color: var(--primary-dark);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li { 
+    margin-left: 25px; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover { 
+    color: var(--accent-purple); 
+}
+
+/* --- Main Containers --- */
+section.container {
+    min-height: 1080px; /* Your requested fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 10%;
+    box-sizing: border-box;
+}
+
+/* About section background swap for luxury feel */
+section#about {
+    background-color: var(--primary-dark);
+    color: var(--white);
+}
+
+/* --- Hero Section --- */
+.hero { 
+    padding: 100px 10%; 
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0;
+    color: var(--primary-dark);
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    color: var(--accent-purple); 
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: var(--text-muted);
+}
+
+/* --- Buttons (The Oval Shape) --- */
+.btn-primary, .btn-oval {
+    background-color: var(--primary-dark);
+    color: white;
+    padding: 14px 35px;
+    border: none;
+    border-radius: 50px; /* Makes it a perfect oval */
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-oval:hover {
+    background-color: var(--accent-purple);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(124, 58, 237, 0.3);
+}
+
+/* --- Project & Certificate Grids --- */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.grid-4, .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* Your original 3-column centering logic for certificates */
+.bottom-row {
+    grid-template-columns: repeat(3, 1fr);
+    width: 75%; 
+    margin: 25px auto 0;
+}
+
+/* --- Card Designs --- */
+.card, .cert-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover, .cert-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-wrapper, .cert-img-wrapper {
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card-img-wrapper img, .cert-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.tags span {
+    font-size: 0.7rem;
+    background: var(--accent-light);
+    color: var(--accent-purple);
+    padding: 5px 12px;
+    margin-right: 5px;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+/* --- About Me Section --- */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.profile-img {
+    width: 380px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.about-text { text-align: left; flex: 1; }
+.about-text h3 { color: var(--white); font-size: 2.2rem; margin-bottom: 20px; }
+
+.skills { margin-top: 25px; line-height: 1.8; }
+.skills strong { color: var(--accent-purple); font-size: 1.1rem; }
+
+/* --- Footer & Contact --- */
+footer { 
+    border-top: 1px solid #eee; 
+    padding: 100px 10%; 
+    background-color: #f8fafc;
+}
+
+.social-links { 
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    margin: 30px 0; 
+}
+
+.view-link {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent-purple);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.view-link:hover { 
+    text-decoration: underline; 
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin-top: 50px;
+}
